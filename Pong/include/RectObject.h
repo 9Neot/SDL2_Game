@@ -13,7 +13,7 @@ public:
 	float getDY();
 	void setX(float x);
 	void setY(float y);
-
+  virtual ~RectObject() = default;
 protected:
 	SDL_FRect rect;
 	SDL_Color color;

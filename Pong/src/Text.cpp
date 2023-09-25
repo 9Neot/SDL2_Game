@@ -1,4 +1,4 @@
-#include "Text.h"
+#include "../include/Text.h"
 
 void Text::init(SDL_Renderer*& renderer, TTF_Font*& font, const std::string& text, const SDL_Color& color) {
 	this->renderer = renderer;

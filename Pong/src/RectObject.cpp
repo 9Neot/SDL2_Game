@@ -1,4 +1,4 @@
-#include "RectObject.h"
+#include "../include/RectObject.h"
 
 void RectObject::init(const SDL_FRect& rect, const SDL_Color& color) {
 	this->rect = rect;

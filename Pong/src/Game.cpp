@@ -1,4 +1,4 @@
-#include "Game.h"
+#include "../include/Game.h"
 
 bool Game::initSystem(const char* title, const int& width, const int& height, const bool& resizalbe) {
 
@@ -37,17 +37,17 @@ bool Game::initSystem(const char* title, const int& width, const int& height, co
 bool Game::loadResources() {
 	//Load fonts
 #ifdef SDL_TTF_MAJOR_VERSION
-	TTF_Font* largeFont = TTF_OpenFont("fonts/VT323-Regular.ttf", 40);
+	TTF_Font* largeFont = TTF_OpenFont("assets/fonts/VT323-Regular.ttf", 40);
 	if (!checkLoading(largeFont)) {
 		return false;
 	}
 
-	TTF_Font* mediumFont = TTF_OpenFont("fonts/VT323-Regular.ttf", 28);
+	TTF_Font* mediumFont = TTF_OpenFont("assets/fonts/VT323-Regular.ttf", 28);
 	if (!checkLoading(mediumFont)) {
 		return false;
 	}
 
-	TTF_Font* smallFont = TTF_OpenFont("fonts/VT323-Regular.ttf", 16);
+	TTF_Font* smallFont = TTF_OpenFont("assets/fonts/VT323-Regular.ttf", 16);
 	if (!checkLoading(smallFont)) {
 		return false;
 	}
@@ -64,27 +64,27 @@ bool Game::loadResources() {
 
 	//Load sounds
 #ifdef SDL_MIXER_MAJOR_VERSION
-	music = Mix_LoadMUS("sounds/Music.wav");
+	music = Mix_LoadMUS("assets/sounds/Music.wav");
 	if (!checkLoading(music)) {
 		return false;
 	}
 
-	sounds[HIT_PADDLE] = Mix_LoadWAV("sounds/Hit_Paddle.wav");
+	sounds[HIT_PADDLE] = Mix_LoadWAV("assets/sounds/Hit_Paddle.wav");
 	if (!checkLoading(sounds[HIT_PADDLE])) {
 		return false;
 	}
 	
-	sounds[HIT_WALL] = Mix_LoadWAV("sounds/Hit_Wall.wav");
+	sounds[HIT_WALL] = Mix_LoadWAV("assets/sounds/Hit_Wall.wav");
 	if (!checkLoading(sounds[HIT_WALL])) {
 		return false;
 	}
 
-	sounds[MISS] = Mix_LoadWAV("sounds/Miss.wav");
+	sounds[MISS] = Mix_LoadWAV("assets/sounds/Miss.wav");
 	if (!checkLoading(sounds[MISS])) {
 		return false;
 	}
 
-	sounds[VICTORY] = Mix_LoadWAV("sounds/Victory.wav");
+	sounds[VICTORY] = Mix_LoadWAV("assets/sounds/Victory.wav");
 	if (!checkLoading(sounds[VICTORY])) {
 		return false;
 	}

@@ -1,4 +1,4 @@
-#include "RandomFloat.h"
+#include "../include/RandomFloat.h"
 
 float RandomFloat::generate(float left, float right) {
 	std::random_device rd;

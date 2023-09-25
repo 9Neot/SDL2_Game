@@ -1,4 +1,4 @@
-#include "Ball.h"
+#include "../include/Ball.h"
 
 void Ball::init(const SDL_FRect& rect, const SDL_Color& color) {
 	RectObject::init(rect, color);
